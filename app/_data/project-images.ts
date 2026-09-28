@@ -1,14 +1,5 @@
-// app/_data/projectImages.ts
+import type { ProjectImage } from "@/types/project";
 
-// Shared TypeScript shape for any project image across your site
-export interface ProjectImage {
-  src: string;
-  caption: string;
-}
-
-// ==========================================
-// 1. ALPHABAG PROJECT
-// ==========================================
 export const alphabagImages: ProjectImage[] = [
   {
     src: "/assets/alphabag/alphabag-1.jpg",
@@ -51,16 +42,3 @@ export const alphabagImages: ProjectImage[] = [
       "Caption for Alphabag screenshot 8 — describe what this screen shows.",
   },
 ];
-
-// ==========================================
-// FUTURE PROJECTS (Uncomment and add when ready)
-// ==========================================
-/*
-export const fitnessAppImages: ProjectImage[] = [
-  { src: "/assets/fitness/dashboard.jpg", caption: "Workout tracking dashboard." },
-];
-
-export const eCommImages: ProjectImage[] = [
-  { src: "/assets/ecommerce/cart.jpg", caption: "Shopping cart checkout flow." },
-];
-*/
