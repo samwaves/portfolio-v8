@@ -1,46 +1,61 @@
-import { alphabagImages } from "./project-images";
+import {
+  acneImpactPrototypeImages,
+  avatarCreatorAlphabagImages,
+  consoleAIChatImages,
+  handwritingClassifierImages,
+  miniRovCompetitionImages,
+  smsAlphabagImages,
+  vexV5CompetitionImages,
+} from "./project-images";
 import type { ProjectCategory } from "@/types/project";
 
 export const projectsData: ProjectCategory[] = [
   {
-    title: "Internship Projects",
+    title: "Selected Work",
     projects: [
       {
-        id: "alphabag-sms",
-        title: "Student Management System @ Alphabag Limited",
+        id: "sms-alphabag",
+        title: "Student Management System",
+        subtitle: "Internship @ Alphabag Limited",
         technologies: ["Next.js", "Firebase"],
-        description:
-          "Designed and developed a full-stack student management system...",
-        images: alphabagImages,
+        description: "**Role: Software Engineering Intern**\n\nHi",
+        images: smsAlphabagImages,
       },
       {
-        id: "alphabag-sms",
-        title: "Student Management System @ Alphabag Limited",
-        technologies: ["Next.js", "Firebase"],
+        id: "avatar-creator-alphabag",
+        title: "Avatar Creator",
+        subtitle: "Internship @ Alphabag Limited",
+        technologies: ["Next.js"],
         description:
           "Designed and developed a full-stack student management system...",
-        images: alphabagImages,
-      },
-    ],
-  },
-  {
-    title: "Personal Projects",
-    projects: [
-      {
-        id: "alphabag-sms",
-        title: "Student Management System @ Alphabag Limited",
-        technologies: ["Next.js", "Firebase"],
-        description:
-          "Designed and developed a full-stack student management system...",
-        images: alphabagImages,
+        images: avatarCreatorAlphabagImages,
       },
       {
-        id: "alphabag-sms",
-        title: "Student Management System @ Alphabag Limited",
+        id: "handwriting-classifier",
+        title: "Handwriting Classifier",
+        subtitle: "Personal Project",
         technologies: ["Next.js", "Firebase"],
         description:
           "Designed and developed a full-stack student management system...",
-        images: alphabagImages,
+        images: handwritingClassifierImages,
+      },
+      {
+        id: "console-ai-chat",
+        title: "Console AI Chat",
+        subtitle: "Personal Project",
+        technologies: ["Next.js", "Firebase"],
+        description:
+          "Designed and developed a full-stack student management system...",
+        images: consoleAIChatImages,
+      },
+      {
+        id: "acne-impact-prototype",
+        title: "Acne Impact Prototype",
+        subtitle: "Personal Project",
+        technologies: ["Next.js", "Firebase"],
+        description:
+          "Designed and developed a full-stack student management system...",
+        images: acneImpactPrototypeImages,
       },
     ],
   },
@@ -48,20 +63,20 @@ export const projectsData: ProjectCategory[] = [
     title: "Competitions",
     projects: [
       {
-        id: "alphabag-sms",
-        title: "Student Management System @ Alphabag Limited",
-        technologies: ["Next.js", "Firebase"],
+        id: "mini-rov-competition",
+        title: "Mini-ROV Competition",
+        technologies: ["Arduino", "C++"],
         description:
           "Designed and developed a full-stack student management system...",
-        images: alphabagImages,
+        images: miniRovCompetitionImages,
       },
       {
-        id: "alphabag-sms",
-        title: "Student Management System @ Alphabag Limited",
+        id: "vex-v5-competition",
+        title: "Vex V5 Robotics Competition",
         technologies: ["Next.js", "Firebase"],
         description:
           "Designed and developed a full-stack student management system...",
-        images: alphabagImages,
+        images: vexV5CompetitionImages,
       },
     ],
   },

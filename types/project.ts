@@ -5,6 +5,7 @@ export type ProjectImage = string | { src: string; caption?: string };
 export interface Project {
   id: string;
   title: string;
+  subtitle?: string;
   technologies: string[];
   description: string;
   thumbnail?: string;
