@@ -2,7 +2,7 @@ const SocialMediaIcons = () => {
   return (
     <div className="flex items-center space-x-4 [&_svg]:size-5">
       <a
-        href="https://github.com/wavesam"
+        href="https://github.com/samwaves"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition duration-300"
@@ -14,7 +14,7 @@ const SocialMediaIcons = () => {
       </a>
 
       <a
-        href="https://linkedin.com/in/wavesam"
+        href="https://linkedin.com/in/samwave"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition duration-300"
@@ -26,7 +26,7 @@ const SocialMediaIcons = () => {
       </a>
 
       <a
-        href="mailto:samuel@wavesam.io"
+        href="mailto:samuel@samwave.io"
         className="hover:opacity-80 transition duration-300"
         aria-label="Email"
       >

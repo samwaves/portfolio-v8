@@ -1,36 +1,160 @@
-@import url("https://googleapis.com");
 @import "tailwindcss";
 
-@theme {
-  --font-inter: "Inter", sans-serif;
-  --font-playfair: "Playfair Display", serif;
+:root {
+  color-scheme: light;
+
+  /* Page and content surfaces */
+  --background: #ffffff;
+  --foreground: #172554;
+  --surface: #f1f5f9;
+  --surface-raised: #e2e8f0;
+  --surface-image: #f1f5f9;
+
+  /* Typography */
+  --text-body: #0f172a;
+  --text-heading: #1e40af;
+  --text-copy: #334155;
+  --text-muted: #64748b;
+  --text-subtle: #475569;
+
+  /* Borders */
+  --border: #cbd5e1;
+  --border-strong: #172554;
+  --border-hover: #94a3b8;
+
+  /* Links and focus */
+  --link: #0369a1;
+  --link-hover: #075985;
+  --focus: #0369a1;
+
+  /* Technology tags */
+  --tag-background: #bfdbfe;
+  --tag-foreground: #334155;
+
+  /* Buttons */
+  --primary: #0369a1;
+  --primary-hover: #075985;
+  --on-primary: #ffffff;
+  --secondary: #cbd5e1;
+  --secondary-hover: #f1f5f9;
+  --on-secondary: #334155;
+
+  /* Decorative elements */
+  --stripe: #f1f5f9;
+  --overlay: rgb(2 6 23 / 60%);
 }
 
-:root {
-  --background: oklch(92.9% 0.013 255.508);
-  --foreground: #171717;
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --background: #020617;
+    --foreground: #dbeafe;
+    --surface: #0f172a;
+    --surface-raised: #172033;
+    --surface-image: #020617;
+
+    --text-body: #f1f5f9;
+    --text-heading: #bfdbfe;
+    --text-copy: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-subtle: #a8b8cc;
+
+    --border: #334155;
+    --border-strong: #475569;
+    --border-hover: #64748b;
+
+    --link: #7dd3fc;
+    --link-hover: #bae6fd;
+    --focus: #38bdf8;
+
+    --tag-background: #1e3a5f;
+    --tag-foreground: #dbeafe;
+
+    --primary: #7dd3fc;
+    --primary-hover: #bae6fd;
+    --on-primary: #082f49;
+    --secondary: #1e293b;
+    --secondary-hover: #334155;
+    --on-secondary: #e2e8f0;
+
+    --stripe: #0b1426;
+    --overlay: rgb(2 6 23 / 80%);
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-image: var(--surface-image);
+
+  --color-body: var(--text-body);
+  --color-heading: var(--text-heading);
+  --color-copy: var(--text-copy);
+  --color-muted: var(--text-muted);
+  --color-subtle: var(--text-subtle);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-border-hover: var(--border-hover);
+
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+  --color-focus: var(--focus);
+
+  --color-tag: var(--tag-background);
+  --color-on-tag: var(--tag-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-on-primary: var(--on-primary);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-on-secondary: var(--on-secondary);
+
+  --color-stripe: var(--stripe);
+  --color-overlay: var(--overlay);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-background font-mono tracking-normal text-foreground antialiased;
+  }
+
+  ::selection {
+    @apply bg-tag text-on-tag;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility bg-page-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--stripe) 0px,
+    var(--stripe) 4px,
+    transparent 4px,
+    transparent 40px
+  );
+}
+
+@utility focus-ring {
+  @apply focus-visible:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-focus
+    focus-visible:ring-offset-2
+    focus-visible:ring-offset-background;
 }
 
 @utility text-link {
-  @apply text-sky-700 dark:text-sky-300;
+  color: var(--color-sky-700);
+
+  @variant dark {
+    color: var(--color-sky-300);
+  }
 }
