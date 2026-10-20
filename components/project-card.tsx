@@ -1,6 +1,7 @@
 "use client";
 
 import type { Project } from "@/types/project";
+import { buttonVariants } from "@/components/ui/button";
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
@@ -8,18 +9,6 @@ const styles = {
   tag:
     "max-w-full rounded bg-tag px-2 py-0.5 " +
     "text-xs text-on-tag [overflow-wrap:anywhere]",
-
-  button:
-    "focus-ring inline-flex min-w-0 cursor-pointer items-center " +
-    "justify-center rounded-md border px-3 py-2 text-sm font-medium " +
-    "transition-colors motion-reduce:transition-none",
-
-  secondaryButton:
-    "border-border bg-secondary text-on-secondary " +
-    "hover:border-border-hover hover:bg-secondary-hover",
-
-  primaryButton:
-    "border-transparent bg-primary text-on-primary hover:bg-primary-hover",
 };
 
 export default function ProjectCard({
@@ -144,8 +133,8 @@ export default function ProjectCard({
         )}
 
         <span className="mb-2 flex w-full min-w-0 flex-col gap-2">
-          <span className="-mb-1.5 text-2xl font-medium text-heading underline-offset-4 group-hover:underline [overflow-wrap:anywhere]">
-            {title}
+          <span className="-mb-1.5 text-xl font-medium text-heading underline-offset-4 group-hover:underline [overflow-wrap:anywhere]">
+            {title} ➔
           </span>
 
           {subtitle && <span className="text-sm text-muted">{subtitle}</span>}
@@ -331,7 +320,10 @@ export default function ProjectCard({
                       href={githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-full ${styles.button} ${styles.secondaryButton}`}
+                      className={buttonVariants({
+                        variant: "secondary",
+                        className: "w-full",
+                      })}
                     >
                       View on GitHub
                     </a>
@@ -342,7 +334,10 @@ export default function ProjectCard({
                       href={linkUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-full ${styles.button} ${styles.primaryButton}`}
+                      className={buttonVariants({
+                        variant: "primary",
+                        className: "w-full",
+                      })}
                     >
                       Visit
                     </a>
@@ -378,7 +373,10 @@ export default function ProjectCard({
                         type="button"
                         onClick={showPreviousImage}
                         aria-label="Previous image"
-                        className={`shrink-0 ${styles.button} ${styles.secondaryButton}`}
+                        className={buttonVariants({
+                          variant: "secondary",
+                          className: "shrink-0",
+                        })}
                       >
                         Previous
                       </button>
@@ -395,7 +393,10 @@ export default function ProjectCard({
                         type="button"
                         onClick={showNextImage}
                         aria-label="Next image"
-                        className={`shrink-0 ${styles.button} ${styles.secondaryButton}`}
+                        className={buttonVariants({
+                          variant: "secondary",
+                          className: "shrink-0",
+                        })}
                       >
                         Next
                       </button>

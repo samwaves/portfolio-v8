@@ -23,17 +23,17 @@
   --border-hover: #94a3b8;
 
   /* Links and focus */
-  --link: #0369a1;
-  --link-hover: #075985;
-  --focus: #0369a1;
+  --link: #1d4ed8;
+  --link-hover: #1e40af;
+  --focus: #1d4ed8;
 
   /* Technology tags */
   --tag-background: #bfdbfe;
   --tag-foreground: #334155;
 
   /* Buttons */
-  --primary: #0369a1;
-  --primary-hover: #075985;
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
   --on-primary: #ffffff;
   --secondary: #cbd5e1;
   --secondary-hover: #f1f5f9;
@@ -64,15 +64,15 @@
     --border-strong: #475569;
     --border-hover: #64748b;
 
-    --link: #7dd3fc;
-    --link-hover: #bae6fd;
-    --focus: #38bdf8;
+    --link: #93c5fd;
+    --link-hover: #bfdbfe;
+    --focus: #60a5fa;
 
     --tag-background: #1e3a5f;
     --tag-foreground: #dbeafe;
 
-    --primary: #7dd3fc;
-    --primary-hover: #bae6fd;
+    --primary: #93c5fd;
+    --primary-hover: #bfdbfe;
     --on-primary: #082f49;
     --secondary: #1e293b;
     --secondary-hover: #334155;
@@ -152,9 +152,9 @@
 }
 
 @utility text-link {
-  color: var(--color-sky-700);
+  color: var(--color-blue-700);
 
   @variant dark {
-    color: var(--color-sky-300);
+    color: var(--color-blue-300);
   }
 }
