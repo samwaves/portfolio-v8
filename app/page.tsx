@@ -54,7 +54,7 @@ export default function Home() {
               Year 2 Information &amp; AI Engineering Student @ PolyU
             </p>
 
-            <ContactActions resumeUrl="/resume.pdf" />
+            <ContactActions />
           </div>
         </section>
 
